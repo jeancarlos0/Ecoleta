@@ -22,9 +22,56 @@
         </header>
         <form action="">
             <h1>Cadastro de ponto de coleta</h1>
+            <!--Tag destinadda a agrupar campos de forumulário relacionados aa uma mesma coisa-->
+            <fieldset>
+                <legend>
+                    <h2>Dados da entidade</h2>
+                </legend>
+
+                <div class="field">
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name="name" id="">
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="adress">Endereço</label>
+                        <input type="text" name="adress" id="">
+                    </div>
+                    <div class="field">
+                        <label for="adress2">Número / Complemento</label>
+                        <input type="text" name="adress2" id="">
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="uf">Estado</label>
+                        <select name="uf">
+                            <option value="">Selecione um estado</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled>
+                            <option value="">Selecione uma cidade</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Itens de coleta</h2>
+                </legend>
+
+                
+            </fieldset>
+
+            <button type="submit">Cadastrar ponto de coleta</button>
         </form>
    </div>
-    
+   <script src="scripts/create-point.js"></script>
 </body>
-<script src="app.js"></script>
+
 </html>

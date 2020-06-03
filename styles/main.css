@@ -1,11 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
     --title-color: #322153;
     --primary-color: #34cb79;
+}
+
+button{
+    cursor: pointer;
 }
 
 body{
@@ -21,4 +26,5 @@ h1, h2, h3, h4, h5, h6{
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
