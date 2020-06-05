@@ -24,6 +24,16 @@
     #page-search-results main img{
         height: 250px;
     }
+    form .field-group .field + .field{
+        margin-left: 0;
+    }
+    form .field-group{
+        display: flex;
+        flex-direction: column;
+    }
+    .items-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(min-width: 1700px){
@@ -35,5 +45,20 @@
 @media(max-height: 760px){
     #page-home{
         background-position-y: 100px;
+    }
+}
+@media(max-width: 400px){
+    #page-home main h1{
+        font-size: 2.5em;
+    }
+    .items-grid{
+        grid-template-columns: 1fr;
+    }
+    form legend{
+        flex-direction: column;
+        justify-content: center;
+    }
+    form legend span{
+        margin-top: 16px;
     }
 }
