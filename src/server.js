@@ -2,6 +2,8 @@ const express = require('express');
 //O require vai retornar uma função, que quando executada retornará um objeto para a var server
 const server = express();
 
+//Peganddo o bd
+const db = require('./database/db');
 //Configurar pastas publicas
 
 server.use(express.static('public'));

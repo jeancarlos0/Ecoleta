@@ -61,4 +61,14 @@
     form legend span{
         margin-top: 16px;
     }
+    #page-search-results header,#page-create-point header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #page-search-results header a,#page-create-point header a{
+        margin-top: 16px;
+    }
+
+    
 }

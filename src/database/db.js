@@ -2,8 +2,12 @@
 const sqlite3 = require('sqlite3').verbose();
 //Cria o objeto que vai manipular o BD
 const db = new sqlite3.Database('./src/database/database.db');
+//Dá acesso ao db a outras partes da aplicação
+module.exports = db
+
 //Manipula o BD
 //Serialize executa uma série de coisas...
+/*
 db.serialize(()=>{
     //Criar tabela 
     //Cria a tabela caso n exista e insere as colunas definidas por argumento
@@ -50,8 +54,26 @@ db.serialize(()=>{
     });
 
     //Consultar dados
+    //Seleciona tudo na tabela places
+    //Rows são os registros da tabela
+    db.all(`SELECT name FROM places`, function(err, rows){
+        if(err){
+            console.log(err);
+        }
+        console.log('Aqui estão os registros');
+        console.log(rows);
+
+    });
 
     //Deletar dados
+    //Vai deletar o item com ID igual a um
+    db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
+        if(err){
+            console.log(err);
+        }
+        console.log('Registro deletado com sucesso');
 
-
+    });
+    
 });
+*/
