@@ -1,9 +1,10 @@
 body:after{
     content: "";
     z-index: -1;
-    position: fixed;
-    background: white;
-    top: 260px;
+    position: absolute;
+    background: #f0f0f5;
+    top: 0;
+    height: 16rem;
     bottom: 0;
     left: 0;
     right: 0;

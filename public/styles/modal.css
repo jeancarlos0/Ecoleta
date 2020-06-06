@@ -72,3 +72,16 @@
 #modal.hide{
     display: none;
 }
+
+/*CSS para o modal do create point*/
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#modal.point .content h3{
+    margin-top: 16px;
+    color: white;
+}

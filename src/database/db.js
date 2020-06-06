@@ -7,7 +7,7 @@ module.exports = db
 
 //Manipula o BD
 //Serialize executa uma série de coisas...
-/*
+///*
 db.serialize(()=>{
     //Criar tabela 
     //Cria a tabela caso n exista e insere as colunas definidas por argumento
@@ -23,6 +23,7 @@ db.serialize(()=>{
             items TEXT
         );
     `);
+    /*
     //Inserir dados
     const query = `INSERT INTO places(
         name,
@@ -35,14 +36,15 @@ db.serialize(()=>{
     ) VALUES (?,?,?,?,?,?,?)`
 
     const values = [
-        "Colectoria",
+        "Papelzão",
         "https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80",
-        "Guilherme Genbalha, Jardim America",
-        "Número 220",
-        "Santa Catarina",
-        "Rio do Sul",
+        "Agostinho Freire, Centro",
+        "Número 22",
+        "Rio grande do Norte",
+        "Serrinha dos Pintos",
         "Papéis e papelão"
     ]
+    
     //Os valores do segundo argumento irão substituir as interrogações na parte de valores da query
     db.run(query, values, function(err){
         //Se houver erro ele será retornado, essa função é executada APENAS APÓS ser inserido os dados
@@ -67,6 +69,7 @@ db.serialize(()=>{
 
     //Deletar dados
     //Vai deletar o item com ID igual a um
+    
     db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
         if(err){
             console.log(err);
@@ -74,6 +77,8 @@ db.serialize(()=>{
         console.log('Registro deletado com sucesso');
 
     });
+    */
     
 });
-*/
+
+

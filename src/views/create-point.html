@@ -3,6 +3,7 @@
 {% set pageID = 'page-create-point' %}
 {% block styles %}
     <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="styles/modal.css">
 {% endblock styles %}
 
 {% block title %}
@@ -12,7 +13,8 @@
 
 {% block content %}
     {%include "partials/page-header.html"%}
-    <form action="">
+    <!--Envia os dados de forma mais segura, os dados serão levados p/ o save point-->
+    <form action="/savepoint" method = 'POST' >
             <h1>Cadastro de ponto de coleta</h1>
             <!--Tag destinadda a agrupar campos de forumulário relacionados aa uma mesma coisa-->
             <fieldset>
@@ -66,29 +68,29 @@
                 </legend>
 
                 <div class="items-grid">
-                    <li data-id="1">
+                    <li data-id="Lâmpadas">
                         <img src="assets/lampadas.svg" alt="lampadas">
                         <span>Lâmpadas</span>
                     </li>
-                    <li data-id="2">
+                    <li data-id="Pilhas e baterias">
                         <img src="assets/baterias.svg" alt="Pilhas e baterias">
                         <span>Pilhas e baterias</span>
                     </li>
-                    <li data-id="3">
+                    <li data-id="Papéis e papelão">
                         <img src="assets/papeis-papelao.svg" alt="Papéis e papelão">
                         <span>Papéis e papelão</span>
                     </li>
-                    <li data-id="4">
+                    <li data-id="Residuos eletrônicos">
                         <img src="assets/eletronicos.svg" alt="Residuos eletrônicos">
                         <span>Residuos eletrônicos</span>
                     </li>
-                    <li data-id="5">
+                    <li data-id="Resíduos orgânicos">
                         <img src="assets/organicos.svg" alt="Residuos orgânicos">
                         <span>Resíduos orgânicos</span>
                     </li>
-                    <li data-id="6">
+                    <li data-id="Óleo de cozinha">
                         <img src="assets/oleo.svg" alt="óleo de cozinha">
-                        <span>óleo de cozinha</span>
+                        <span>Óleo de cozinha</span>
                     </li>
                 </div>
                 <input type="hidden" name="items">
@@ -96,7 +98,16 @@
 
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>
+
+        
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {%include 'partials/point-created.html'%}
+    {% endif %}
+{% endblock modal %}
+
 
 {% block scripts %}
     <script src="scripts/create-point.js"></script>
